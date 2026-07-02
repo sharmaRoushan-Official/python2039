@@ -1,0 +1,162 @@
+Satyadev PYTHON TEST
+
+
+1.Reverse a string without slicing:
+  "Hellow World"
+
+>>>>
+
+
+
+
+
+2.Count words in sentence:
+  “A Quick Brown Fox Jump Over the Lazy Dog” 
+
+>>>>
+
+
+
+
+
+3. Remove duplicate characters. 
+  “Carrot” 
+
+>>>>
+
+
+
+
+
+
+4.What is difference between lists and sets? 
+>>>> Lists                 |      Sets
+    1. ordered             | 1.  unordered
+    2. allow duplicate     | 2.  no duplicate
+    3. mutable             | 3.   mutable
+    4. indexed             | 4.  no indexing
+
+
+
+
+5. Can sets contains lists? If Yes How If no why? 
+>>>> no 
+      lists are mutable while sets element must must be immutable.
+
+
+
+6. Why sets are faster? 
+>>>>
+
+
+
+
+7. Difference between remove () and discard () 
+>>>> Remove()                     |  Discard()
+     1. uses list and set         | 1.  uses only set
+                                  |
+                                  |
+
+
+
+8. How many methods to insert elements in the list? Total Method? 
+>>>> +
+     append ()
+     insert ()
+     extend ()
+   
+
+
+
+9. How many methods to delete elements in the lists? Total Method? 
+>>>> remove ()
+     pop ()
+     clear ()
+     del ()
+
+
+
+
+10. How many Operators in Python Write their name in Explain? 
+>>>> 1. arithmetic operators
+     2. comparison operators
+     3.assignment operators
+     4.logical operators
+
+
+
+
+11. Write precedence Rule of arithmetic in Python? 
+>>>>1. ()
+    2. **
+    3.  */ // %
+    4. + -
+
+
+
+
+12. How to sort elements in list using slicing method? 
+ [5,11,14,7,8,3,2,5,9] 
+>>>> x = [5,11,14,7,8,3,2,5,9]
+     print(sorted(x))
+     print(sorted(x)[::-1])
+
+
+      
+
+
+
+
+13. What is Dictionary 
+>>>> Dictionary is a collection data type in python used to store data in key-value pair.
+
+
+
+14.  How many methods to create dictionary? 
+>>>>
+
+
+
+
+
+15. How many methods to access value in dictionary? 
+>>>>  []
+      keys()
+      value()
+      
+
+
+16. How many methods to delete elements in dictionary? 
+>>>> pop()
+     popitem()
+     clear()
+     del()
+
+
+
+
+17. How to perform mathematical operations in sets write method name? 
+>>>>
+
+
+
+
+18. What is packing variable in tuple? Explain using example? 
+>>>> packing means storing multiple values in one touple
+      t= 10,20,30
+      print (t)
+       (10, 20, 30)
+
+
+
+
+19. What is unpacking variables in tuple? Explain using example? 
+>>>> 
+
+
+
+20. Difference between sets and dictionary?
+>>>>
+            SETS                           | DICTIONARY
+1.set stores only value                    | 1.stores key value pair
+2.no duplicate values                      | 2.keys are unique
