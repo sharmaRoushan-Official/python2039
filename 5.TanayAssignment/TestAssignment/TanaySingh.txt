@@ -1,0 +1,152 @@
+1. Reverse a String without slicing:
+
+str = input("Enter a string: ")
+rev = ""
+for i in range (len(str)-1,-1,-1):
+    rev += str[i]
+print(rev)
+
+
+1. Reverse a String with slicing:
+
+str = input("Enter a string: ")
+revStr = str[::-1]
+print(revStr)
+
+
+2. Count words in a sentence:
+
+str = input("Enter a string: ")
+count = 1
+for i in str:
+    if i==" ":
+        count+=1
+print("No of words is ",count)
+
+
+3. Remove duplicate characters:
+
+str = input("Enter a string: ")
+newStr=""
+for i in range (0,len(str)):
+    if str[i]==str[i-1]:
+        newStr=str[:i]+str[i+1:]
+print(newStr)
+
+
+4. Difference between lists and sets:
+
+Lists:
+1. List have ordered elements.
+2. List can have duplicate elements.
+3. List can contain multiple data types including list.
+4. List is indexed.
+
+Sets:
+1. Set have unordered elements.
+2. Set cannot have duplicate elements.
+3. Set can only contain integers, strings and tuples.
+4. Set is unindexed.
+
+
+5. Can sets contain lists:
+
+No sets cannot contain lists as sets use a hash table to store values.
+Sinve values in hash table cannot be changed after they are stored and lists are mutable, lists cannot be stored in sets.
+
+
+6. Why sets are faster:
+
+Sets are faster because they use a hash table to store and read values.
+Since the hash table only contains unique values, sets are faster compared to other data types.
+
+
+7. Differnece between remove() and discard():
+
+remmove():
+1. Gives an error if the element to be removed is missing.
+
+discard():
+1. Does not give an error if the element to be removed is missing.
+
+
+8. How many methods to insert element in a list. Total methods:
+
+There are 3 methods to insert element in a list. They are:
+1. append(): Adds a single element to the end of the list.
+2. insert(index,element): Adds an element to a specific index.
+3. extend(): Adds multiple elements to the end of the list.
+
+
+9. How many methods to delete elements in lists. Total methods:
+
+There are 5 methods to delete elements in lists. They are:
+1. remove(): Deletes first instance of the element in the list.
+2. del(list[index]): Deletes the specified index in the list.
+3. del(list): Deletes the entire list itself.
+3. pop(): Deletes the last element of the list.
+4. pop(index): Deletes the specified index in the list.
+5. clear(): Deletes all elements of the list making it empty.
+
+
+10. How many operators in Pyhton. Write their names and explain:
+
+There are 7 main types of operators in Python. They are:
+1. Arithmetic Operators: They do mathematical calculations. Eg: +, -, *, /, %, etc.
+2. Assigment Operators: They are used to assign values to variables. Eg: =, +=, -=, etc.
+3. Comparison Operators: They are used to compare values between two variables. Eg: >, <, ==, etc.
+4. Logical Operators: They combine conditional statements. Eg: and, or, not, etc.
+5. Membership Operators: They check if a value is in another sequence of values. Eg: in, not in, etc.
+6. Identity Operators: They check if two variables refer to the same object in memory. Eg: is, is not, etc.
+7. Bitwise Operators: They perform operations on the binary bits of a value. Eg: &, |, ^, <<, >>, etc.
+
+
+11. Write precedence rule of arithmetic in Python:
+
+Arithmetic follows PEDMAS rule in Python.
+1. Paranthesis: First is ()(Paranthesis).
+2. Exponentation: Second is **(Exponentation);
+3. Division / Multiplication: Third is either /(Division) or *(Multiplication) or %(Modular Division).
+4. Addition / Subtraction: Fourth is either +(Addition) or -(Subtraction).
+
+
+12. How to sort elements in list using slicing method:
+
+list1 = [2,4,8,467,342,45,86,24,435]
+print(list1)
+list1.sort()
+print(list1)
+
+
+13. What is dictionary:
+
+Dictionary is a data type in Python that stores key-value pairs.
+The keys are immutable while the values are mutable.
+Values can be accessed with the help of keys.
+Keys can only be of immutable data types like int, string, tuple.
+Values can be of any data type as they are mutable.
+Keys are unique while values can be duplicate.
+
+
+14. How many methods to create a dictionary:
+
+There are 3 methods to create a dictionary. They are:
+1. {key:value}: By entering key-value pairs you can create a dictionary.
+2. {}: By just giving an empty curly braces you create an empty dictionary.
+3. dict(key=value): By entering key-value pairs you can create a dictionary.
+
+
+15. How many methods to access value in dictionary:
+
+There are 2 methods to access value in dictionary. They are:
+1. [key]: By passing a key value paired to that key can be accessed. Gives an error if no key found.
+2. .get(key): Similar to the first one but does not return an error if no key found.
+
+
+16. How many methods to delete elements in dictionary:
+
+1. del(key): Deletes the specified key-value pair.
+2. del(): Deletes the entire dictionary object.
+3. pop(): Deletes the specified key value pair and returns the deleted value.
+4. popitem(): Deletes the last inserted key-value pair and returns the key-value pair.
+5. clear(): Deletes all key value pairs making the dictionary empty.
