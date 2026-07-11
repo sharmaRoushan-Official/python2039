@@ -1,0 +1,152 @@
+Q4 what is the difference between lists and set
+
+ list
+. list is insert element in orderd 
+. list are muttable
+. list is insert duplicate element 
+. list performance is slower as compare to set 
+. list can access element by index(list[0])
+. list syntax- list= [1,2,3,4,]
+
+
+ set
+.  set is insert element in unorderd 
+. set are immutable 
+. set is insert unique element
+. set performance is fast as compare to list
+. set cannot access element by index
+. syntax - {1,2,3,4,5,}
+
+
+Q6 why sets are faster
+ans- because not check one by one sets use hash 
+     hash is help to find element faster in set
+     no need to check all element
+
+Q5 can set contains list? if yes how if no why?
+ans- set is not contain list. because set are immutable 
+      and list are mutable. and set are stored immutable element 
+      value . 
+   
+Q7 difference between remove() and discard()
+ans- remove()- if set not present element is give  error
+     discard()- if not present element in set give no error
+
+Q8 how many method to insert element in the lists? total method?
+ans . insert() 
+    . append()
+
+Q9  how many method to delete element in list? 
+ ans . del()
+     . remove()
+     . pop()
+     . clear()
+Q10 how many operator in python?
+ ans- .1 Arithmetic operator- (+,-,*,%,//,)
+      2. comparison operator-(!=,==,<=,>=,<,>)
+     3. logical operator- (And, or, not)
+     4.assignment operator-(=,>>=)
+     5.membership operator -( in , not in)
+     6. bitwise operator
+
+Q13 what is dictionary?
+ans .dictionary is store key-value pair
+    . dictionary is mutable
+    . dictionary is stored unique key 
+    . value can be duplicate
+    . syntax-  student={ "name":"rima",
+                 "age":22
+                  }
+
+Q14 how many method to access value in dictinary?
+
+ans  get()- method uses
+
+Q15 how many method to delete value in dictinary?
+ans  .pop()
+     .clear()
+     .del
+Q20 difference between set and dictionary
+ans  dictionary
+     dictionary is store key-value pair
+    . dictionary is mutable
+    . dictionary is stored unique key
+    . value can be duplicate
+    . syntax-  student={ "name":"rima",
+                 "age":22
+                  }
+    set
+.  set is insert element in unorderd
+. set are immutable
+. set is insert unique element
+. set performance is fast as compare to list
+. set cannot access element by index
+. syntax - {1,2,3,4,5,}
+
+
+Q1  reverse
+    text="hello world"
+   print("text[::-1])
+
+Q2 count word
+   text="a quick brown fox jump over the lazy dog"
+     print(len(text))
+
+Q3 remove duplicate 
+ text="carrot"
+  for i in text:
+        if i in text:
+ Q12 sort element 
+     num=[5,11,14,7,8,3,2,5,9]  
+       num.sort()
+       print(num)
+
+           
+Q17 how to perform mathematical operation in sets write method name?
+     . intersection (a&b)- common element print
+     . union(a|b) - print unique value 
+     . difference(a-b)- first element print
+  
+
+
+ans precedence rule
+       operator 
+       . ()parentheses
+        . **(exponent)
+         . multiplication(*)
+          .division(%)
+           . add, substract(+,-)
+           .comparissin(==,!=)
+           . not
+           . and
+       
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+    
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+ 
