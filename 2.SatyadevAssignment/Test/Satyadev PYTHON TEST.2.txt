@@ -1,0 +1,203 @@
+Python Test Questions
+
+1. Conditions (if, elif, else)
+
+Q1.  Write a program to check whether a number is positive, negative, or
+    zero.
+>>>
+   num = int(input("Enter a number: "))
+   
+   if num > 0:
+       print("Positive")
+   elif num < 0:
+       print("Negative")
+   else:
+       print("Zero")
+
+
+Q2.  Write a program to find the largest of three numbers.
+>>>
+   a = int(input())
+   b = int(input())
+   c = int(input())
+
+   if a >= b and a >=c:
+      print(a)
+   elif b >= a and b >=c:
+      print(b)
+   else:
+       print(c)
+
+
+
+Q3.  Write a program to check whether a given year is a leap year.
+>>> 
+    year = int(input("Enter a year: "))
+
+    if (year % 400 == 0) or (year % 4 == 0 and year % 100 != 0):
+        print(year, "is a leap year.")
+    else:
+        print(year, "is not a leap year.")
+
+
+Q4.  Write a program to check if a character is a vowel or consonant.
+>>>
+   ch = input("Enter a character: ")
+   
+   if ch in "aeiouAEIOU":
+      print("Vowel")
+   else:
+       print("Consonant")
+
+
+Q5.  Write a program to calculate the electricity bill:
+    -   First 100 units → ₹5/unit
+    -   Next 100 units → ₹7/unit
+    -   Above 200 units → ₹10/unit
+>>> 
+
+
+2. Loops (for / while)
+
+Q1.  Print all even numbers from 1 to 100.
+>>>
+   for i in range(2, 101, 2):
+       print(i)
+
+
+Q2.  Find the factorial of a given number using a loop.
+>>>
+   n = int(input("Enter a number: "))
+   fact = 1
+
+   for i in range(1, n + 1):
+       fact *= i
+   print("Factorial =", fact)
+
+
+Q3.  Print the Fibonacci series up to n terms
+>>>
+   
+Q4.  Find the sum of digits of a given number.
+>>>
+   n = int(input("Enter a number: "))
+   s = 0
+
+   while n > 0:
+       s += n % 10
+       n //= 10
+
+   print("sum =", s)
+
+
+Q5.  Check whether a number is an Armstrong number.
+>>>
+
+
+
+3. Functions
+
+Q1.  Write a function to find the greatest of three numbers.
+>>> 
+   def gratest(a, b, c):
+       return max(a, b, c)
+
+   a = int(input())
+   b = int(input())
+   c = int(input())
+
+   print("Greatest =", greatest(a, b, c))
+
+
+Q2.  Write a function to check whether a number is prime.
+>>>
+   def prime(n):
+       if n <= 1:
+           return False
+       for i in range(2, n):
+           if n % i == 0:
+               return False
+       return True
+   
+   n = int(input())
+
+   if prime(n):
+       print("Prime")
+   else:
+       print("Not Prime")
+
+
+   
+Q3.  Write a function that returns the reverse of a string.
+>>>
+   def reverse(s):
+       return s[::-1]
+
+   text = input()
+
+   print(reverse(text))
+
+
+Q4.  Write a function to calculate the area and perimeter of a rectangle.
+>>>
+   def rectangle(length, width):
+       area = length * width
+       perimeter = 2 * (length + width)
+       return area, perimeter
+   
+   l = float(input("Enter length: "))
+   w = float(inpput("Enter width: "))
+
+   a, p = rectangle(l, w)
+
+   print("Area =", a)
+   print("perimeter =", p)
+
+
+Q5.  Write a function that accepts a list and returns the second largest
+    element.
+>>>
+
+4. Exception Handling
+
+Q1.  Write a program to handle ZeroDivisionError.
+>>>
+   try:
+       a = int(input())
+       b = int(input())
+       print(a / b)
+   except ZeroDivisionError:
+       print("Cannot divide by zero")
+
+       
+Q2.  Write a program to handle ValueError when the user enters invalid
+    input.
+>>>
+   try:
+       n = int(input())
+       print(n)
+   except ValueError:
+       print("Invalid input")
+
+
+Q3.  Create a custom exception to check if age is less than 18.
+>>>
+   class AgeError(Exception):
+       pass
+
+   try:
+       age = int(input())
+       if age < 18:
+           raise AgeError
+       print("Eligible")
+   except AgeError:
+       print("Age must be 18 or above")
+
+
+Q4.  Write a program that handles both IndexError and KeyError.
+>>>
+
+
+Q5.  Write a program using try, except, else, and finally to read a file
+    and display its contents.
+>>>
