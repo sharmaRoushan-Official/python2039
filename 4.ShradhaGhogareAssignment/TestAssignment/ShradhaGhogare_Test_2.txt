@@ -1,736 +1,272 @@
-{
- "cells": [
-  {
-   "cell_type": "markdown",
-   "id": "d181cd0c-280d-49a3-ab73-cf74e004d28e",
-   "metadata": {},
-   "source": [
-    "# condition "
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "58168af8-0ae4-4f6b-ae06-b305e3ccdc71",
-   "metadata": {},
-   "source": [
-    "### Q 1.  Write a program to check whether a number is positive, negative, or zero\n",
-    "    "
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 2,
-   "id": "ee60df14-cf5f-42c9-81c2-58d5e2c7e49b",
-   "metadata": {},
-   "outputs": [
-    {
-     "name": "stdin",
-     "output_type": "stream",
-     "text": [
-      "Enter a number: 25\n"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "The number is positive\n"
-     ]
-    }
-   ],
-   "source": [
-    "num = float(input(\"Enter a number:\"))\n",
-    "if num > 0:\n",
-    "    print(\"The number is positive\")\n",
-    "elif num < 0:\n",
-    "    print(\"The number is negative\")\n",
-    "else:\n",
-    "    print(\"The number is zero\")\n",
-    "            \n",
-    "            "
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "df2ace6b-ae8a-411b-a736-57cff9793dd2",
-   "metadata": {},
-   "source": [
-    "### Q 2.  Write a program to find the largest of three numbers."
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 8,
-   "id": "e273782d-b065-4cf5-9140-83d05d9699ca",
-   "metadata": {},
-   "outputs": [
-    {
-     "name": "stdin",
-     "output_type": "stream",
-     "text": [
-      "Enter first number: 80\n",
-      "Enter second number: 40\n",
-      "Enter third number: 50\n"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "largest number is: 80\n"
-     ]
-    }
-   ],
-   "source": [
-    "a = int(input(\"Enter first number:\"))\n",
-    "b = int(input(\"Enter second number:\"))\n",
-    "c = int(input(\"Enter third number:\"))\n",
-    "if a >= b and a >= c:\n",
-    "    largest = a\n",
-    "elif b >= a and b >= c:\n",
-    "    largest = b\n",
-    "else:\n",
-    "    largest = c\n",
-    "print(\"largest number is:\", largest)"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "7d68f19e-e118-4313-957e-3d308de9df0b",
-   "metadata": {},
-   "source": [
-    "### Q3.  Write a program to check whether a given year is a leap year.\n"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 12,
-   "id": "fb217273-5562-4ace-b8e5-f181914ad1df",
-   "metadata": {},
-   "outputs": [
-    {
-     "name": "stdin",
-     "output_type": "stream",
-     "text": [
-      "Enter a year: 1990\n"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "Not a leap year\n"
-     ]
-    }
-   ],
-   "source": [
-    "year =int(input(\"Enter a year:\"))\n",
-    "\n",
-    "if(year % 400 == 0) or (year % 4 == 0 and year % 100 !=0):\n",
-    "    print(\"leap year\")\n",
-    "else:\n",
-    "    print(\"Not a leap year\")"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "aacd3de3-39e4-4748-9cdf-0fed2f0bca96",
-   "metadata": {},
-   "source": [
-    "### Q 4.  Write a program to check if a character is a vowel or consonant.\n",
-    "\n"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 13,
-   "id": "90e53611-64b0-445a-8e7c-fbe95548bb54",
-   "metadata": {},
-   "outputs": [
-    {
-     "name": "stdin",
-     "output_type": "stream",
-     "text": [
-      "Enter a character: h\n"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "The character is a consonant\n"
-     ]
-    }
-   ],
-   "source": [
-    "str = input(\"Enter a character:\").lower()\n",
-    "\n",
-    "if str in \"aeiou\":\n",
-    "    print(\"The character is avowel\")\n",
-    "elif str.isalpha():\n",
-    "    print(\"The character is a consonant\")\n",
-    "else:\n",
-    "    print(\" please enter a valid character\")"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "04b05aa4-e804-41be-b187-a21f69a3a099",
-   "metadata": {},
-   "source": [
-    "### Q 5.  Write a program to calculate the electricity bill:\n",
-    "    -   First 100 units → ₹5/unit\n",
-    "    -   Next 100 units → ₹7/unit\n",
-    "    -   Above 200 units → ₹10/unit\n"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 19,
-   "id": "f9618222-6160-4463-8e51-c5e05e9aea73",
-   "metadata": {},
-   "outputs": [
-    {
-     "name": "stdin",
-     "output_type": "stream",
-     "text": [
-      "Enter units : 400\n"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "Total bill: 3200\n"
-     ]
-    }
-   ],
-   "source": [
-    "units = int(input(\"Enter units :\"))\n",
-    "if units <= 100:\n",
-    "    bill = units * 5\n",
-    "elif units <= 200:\n",
-    "    bill = ( units * 7) - 200\n",
-    "else:\n",
-    "    bill = (units * 10) - 800\n",
-    "    print(\"Total bill:\", bill)"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "b91ff219-594c-48d9-bba8-688cadd858b8",
-   "metadata": {},
-   "source": [
-    " # Loops (for / while)\n",
-    "\n"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "f832cf7a-1433-4ea4-b1a7-0f7159f3e4be",
-   "metadata": {},
-   "source": [
-    "### 1.  Print all even numbers from 1 to 100.\n"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 26,
-   "id": "d78d0ff0-b1ff-490f-804b-35b94612bd02",
-   "metadata": {},
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "2\n",
-      "4\n",
-      "6\n",
-      "8\n",
-      "10\n",
-      "12\n",
-      "14\n",
-      "16\n",
-      "18\n",
-      "20\n",
-      "22\n",
-      "24\n",
-      "26\n",
-      "28\n",
-      "30\n",
-      "32\n",
-      "34\n",
-      "36\n",
-      "38\n",
-      "40\n",
-      "42\n",
-      "44\n",
-      "46\n",
-      "48\n",
-      "50\n",
-      "52\n",
-      "54\n",
-      "56\n",
-      "58\n",
-      "60\n",
-      "62\n",
-      "64\n",
-      "66\n",
-      "68\n",
-      "70\n",
-      "72\n",
-      "74\n",
-      "76\n",
-      "78\n",
-      "80\n",
-      "82\n",
-      "84\n",
-      "86\n",
-      "88\n",
-      "90\n",
-      "92\n",
-      "94\n",
-      "96\n",
-      "98\n",
-      "100\n"
-     ]
-    }
-   ],
-   "source": [
-    "for i in range(1, 101):\n",
-    "    if i % 2 == 0:\n",
-    "        print(i)"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "870c2c6b-29ac-4961-b92e-af4ade9ee758",
-   "metadata": {},
-   "source": [
-    "### 2.  Find the factorial of a given number using a loop.\n",
-    " "
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 27,
-   "id": "418a30c7-359d-4f76-8949-9612a406315e",
-   "metadata": {},
-   "outputs": [
-    {
-     "name": "stdin",
-     "output_type": "stream",
-     "text": [
-      "Enter a number: 8\n"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "factorial of 5 is: 1\n",
-      "factorial of 5 is: 2\n",
-      "factorial of 5 is: 6\n",
-      "factorial of 5 is: 24\n",
-      "factorial of 5 is: 120\n"
-     ]
-    }
-   ],
-   "source": [
-    "num = int(input(\"Enter a number:\"))\n",
-    "fact =1 \n",
-    "\n",
-    "for i in range(1, n + 1):\n",
-    "    fact = fact *i\n",
-    "    print(\"factorial of\", n, \"is:\", fact)"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "9b6037c5-0380-40e4-b146-f1fd4e96f1d8",
-   "metadata": {},
-   "source": [
-    "### 3.  Print the Fibonacci series up to n terms.\n"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 29,
-   "id": "a643d257-7106-4853-ba32-29d962242e60",
-   "metadata": {},
-   "outputs": [
-    {
-     "name": "stdin",
-     "output_type": "stream",
-     "text": [
-      "Enter a number: 6\n"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "fibonacci series:\n",
-      "0 1 1 2 3 5 "
-     ]
-    }
-   ],
-   "source": [
-    "n = int(input(\"Enter a number:\"))\n",
-    "a = 0\n",
-    "b = 1\n",
-    "i = 0\n",
-    "print(\"fibonacci series:\")\n",
-    "while i < n:\n",
-    "    print(a, end=\" \")\n",
-    "    c = a + b\n",
-    "    a = b\n",
-    "    b = c\n",
-    "    i = i + 1"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "9159bcb6-74a0-4a2a-b3db-cfd1af9d5453",
-   "metadata": {},
-   "source": [
-    "### 4.  Find the sum of digits of a given number.\n"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 33,
-   "id": "263ff6c2-e82a-49d1-9477-0999e5d8969a",
-   "metadata": {},
-   "outputs": [
-    {
-     "name": "stdin",
-     "output_type": "stream",
-     "text": [
-      "Enter a number: 987\n"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "sum of digits: 9\n",
-      "sum of digits: 17\n",
-      "sum of digits: 24\n"
-     ]
-    }
-   ],
-   "source": [
-    "n = input(\"Enter a number:\")\n",
-    "sum = 0\n",
-    "for digit in n:\n",
-    "    sum = sum + int( digit)\n",
-    "    print (\"sum of digits:\", sum)"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "667a0681-f286-415b-8586-7bf2a8964408",
-   "metadata": {},
-   "source": [
-    "### 5. Check whether a number is an Armstrong number"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "id": "f48352a8-428d-4ae1-a7b2-9e49030133bb",
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "markdown",
-   "id": "98c5afaf-b0ab-4e3a-8ed5-b34f5eee24cf",
-   "metadata": {},
-   "source": [
-    "# Functions"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "9da65ea3-6ba5-49e9-87c8-89957d52eb41",
-   "metadata": {},
-   "source": [
-    "### 1.  Write a function to find the greatest of three numbers.\n"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 34,
-   "id": "722dece9-0616-458d-b323-1e404ba9d7fa",
-   "metadata": {},
-   "outputs": [
-    {
-     "name": "stdin",
-     "output_type": "stream",
-     "text": [
-      "Enter first number: 11\n",
-      "Enter second number: 45\n",
-      "Enter third number: 50\n"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "Greatest number is: 50\n"
-     ]
-    }
-   ],
-   "source": [
-    "def greatest(a , b, c):\n",
-    "    return max(a, b ,c)\n",
-    "num1 = int(input(\"Enter first number:\"))\n",
-    "num2 = int(input(\"Enter second number:\"))\n",
-    "num3 = int(input(\"Enter third number:\"))\n",
-    "print(\"Greatest number is:\",greatest(num1, num2, num3))"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "31d80625-65f4-44dc-a77f-1b1e9a0a76be",
-   "metadata": {},
-   "source": [
-    "### 2.  Write a function to check whether a number is prime.\n"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "id": "492ae2db-475f-4784-b1d3-e57e890da9d9",
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "def is_prime(n):\n",
-    "    if n <= 1:\n",
-    "        return False\n",
-    "    if n == 2:\n",
-    "        return True\n",
-    "    if n % 2 == 0:\n",
-    "        return False\n",
-    "    for i in range\n",
-    "      if n % i == 0:\n",
-    "          return False\n",
-    "          "
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "2de82a73-4937-416f-a2e7-15c45db54b62",
-   "metadata": {},
-   "source": [
-    "### 3.  Write a function that returns the reverse of a string.\n"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 38,
-   "id": "547ee170-8358-4eb5-8c30-8b8dc2601e32",
-   "metadata": {},
-   "outputs": [
-    {
-     "name": "stdin",
-     "output_type": "stream",
-     "text": [
-      "Enter a string: madam\n"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "madam  is a palidrome\n"
-     ]
-    }
-   ],
-   "source": [
-    "def is_palindrome(s):\n",
-    "    reverse = s[::-1]\n",
-    "    if s == reverse:\n",
-    "        return True\n",
-    "    else:\n",
-    "        return False \n",
-    "word = input (\"Enter a string:\")\n",
-    "if is_palindrome(word):\n",
-    "    print(word, \" is a palidrome\")\n",
-    "else:\n",
-    "    print(word, \"is not a palindrome\")"
-   ]
-  },
-  {
-   "cell_type": "raw",
-   "id": "09cd797c-8758-41b3-9cfd-d4387068dc71",
-   "metadata": {
-    "collapsed": true,
-    "jupyter": {
-     "outputs_hidden": true
-    }
-   },
-   "source": []
-  },
-  {
-   "cell_type": "markdown",
-   "id": "52e0e930-6667-4a75-a51a-12c13d86b393",
-   "metadata": {},
-   "source": [
-    "### 4.  Write a function to calculate the area and perimeter of a rectangle.\n"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "id": "a59f1392-4062-496a-93d4-e34fd017856d",
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "markdown",
-   "id": "85fc1d73-d03d-4003-b2e9-09075b9bb22c",
-   "metadata": {},
-   "source": [
-    "### 5.  Write a function that accepts a list and returns the second largest element"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "42689b94-672a-4833-9ab7-be50c07b57f8",
-   "metadata": {},
-   "source": [
-    "# excepion handling"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "12613ed9-707d-41a1-9ad3-99f6e4bf26bf",
-   "metadata": {},
-   "source": [
-    "### 1.  Write a program to handle ZeroDivisionError.\n"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "id": "e9ff2939-66fc-44f1-a46b-553d7a056c07",
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "markdown",
-   "id": "29b7a995-db39-4499-ba59-1a00d811c521",
-   "metadata": {},
-   "source": [
-    "### 2.  Write a program to handle ValueError when the user enters invalid\n",
-    "    "
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 42,
-   "id": "341e8d84-60d1-4816-a21f-d5cdeafb3d4b",
-   "metadata": {},
-   "outputs": [
-    {
-     "name": "stdin",
-     "output_type": "stream",
-     "text": [
-      "Enter a number: g\n"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "Invalid input\n"
-     ]
-    }
-   ],
-   "source": [
-    "try:\n",
-    "    num = int(input(\"Enter a number:\"))\n",
-    "    print(\"you entered:\", num)\n",
-    "    \n",
-    "except ValueError:\n",
-    "    print(\"Invalid input\")"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "9aebeb3e-f40a-4296-a15c-ce48b6edda65",
-   "metadata": {},
-   "source": [
-    "### 3.  Create a custom exception to check if age is less than 18.\n"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "id": "f50796bf-b232-4e1d-9e93-280ce4592c6c",
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "markdown",
-   "id": "79b540e9-b289-4071-964f-195c8edc8ffa",
-   "metadata": {},
-   "source": [
-    "### 4.  Write a program that handles both IndexError and KeyError.\n",
-    "\n"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "id": "5e8f25e7-94e7-4991-9f3d-74eb306e1584",
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "markdown",
-   "id": "ee00a007-3984-419f-b272-c27c9d961b16",
-   "metadata": {},
-   "source": [
-    "### 5.  Write a program using try, except, else, and finally to read a file and display its contents.\n",
-    "   "
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "id": "a4c2b078-cc45-46aa-a1d7-0cdf778ea747",
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  }
- ],
- "metadata": {
-  "kernelspec": {
-   "display_name": "Python 3 (ipykernel)",
-   "language": "python",
-   "name": "python3"
-  },
-  "language_info": {
-   "codemirror_mode": {
-    "name": "ipython",
-    "version": 3
-   },
-   "file_extension": ".py",
-   "mimetype": "text/x-python",
-   "name": "python",
-   "nbconvert_exporter": "python",
-   "pygments_lexer": "ipython3",
-   "version": "3.14.6"
-  }
- },
- "nbformat": 4,
- "nbformat_minor": 5
-}
+
+
+condition
+
+Q 1. Write a program to check whether a number is positive, negative, or zero
+
+    num = float(input("Enter a number:"))
+    if num > 0:
+        print("The number is positive")
+    elif num < 0:
+        print("The number is negative")
+    else:
+        print("The number is zero")
+                
+                
+
+    Enter a number: 25
+
+    The number is positive
+
+Q 2. Write a program to find the largest of three numbers.
+
+    a = int(input("Enter first number:"))
+    b = int(input("Enter second number:"))
+    c = int(input("Enter third number:"))
+    if a >= b and a >= c:
+        largest = a
+    elif b >= a and b >= c:
+        largest = b
+    else:
+        largest = c
+    print("largest number is:", largest)
+
+    Enter first number: 80
+    Enter second number: 40
+    Enter third number: 50
+
+    largest number is: 80
+
+Q3. Write a program to check whether a given year is a leap year.
+
+    year =int(input("Enter a year:"))
+
+    if(year % 400 == 0) or (year % 4 == 0 and year % 100 !=0):
+        print("leap year")
+    else:
+        print("Not a leap year")
+
+    Enter a year: 1990
+
+    Not a leap year
+
+Q 4. Write a program to check if a character is a vowel or consonant.
+
+    str = input("Enter a character:").lower()
+
+    if str in "aeiou":
+        print("The character is avowel")
+    elif str.isalpha():
+        print("The character is a consonant")
+    else:
+        print(" please enter a valid character")
+
+    Enter a character: h
+
+    The character is a consonant
+
+Q 5. Write a program to calculate the electricity bill:
+
+    -   First 100 units → ₹5/unit
+    -   Next 100 units → ₹7/unit
+    -   Above 200 units → ₹10/unit
+
+    units = int(input("Enter units :"))
+    if units <= 100:
+        bill = units * 5
+    elif units <= 200:
+        bill = ( units * 7) - 200
+    else:
+        bill = (units * 10) - 800
+        print("Total bill:", bill)
+
+    Enter units : 400
+
+    Total bill: 3200
+
+# Loops (for / while)
+
+1. Print all even numbers from 1 to 100.
+
+    for i in range(1, 101):
+        if i % 2 == 0:
+            print(i)
+
+    2
+    4
+    6
+    8
+    10
+    12
+    14
+    16
+    18
+    20
+    22
+    24
+    26
+    28
+    30
+    32
+    34
+    36
+    38
+    40
+    42
+    44
+    46
+    48
+    50
+    52
+    54
+    56
+    58
+    60
+    62
+    64
+    66
+    68
+    70
+    72
+    74
+    76
+    78
+    80
+    82
+    84
+    86
+    88
+    90
+    92
+    94
+    96
+    98
+    100
+
+2. Find the factorial of a given number using a loop.
+
+    num = int(input("Enter a number:"))
+    fact =1 
+
+    for i in range(1, n + 1):
+        fact = fact *i
+        print("factorial of", n, "is:", fact)
+
+    Enter a number: 8
+
+    factorial of 5 is: 1
+    factorial of 5 is: 2
+    factorial of 5 is: 6
+    factorial of 5 is: 24
+    factorial of 5 is: 120
+
+3. Print the Fibonacci series up to n terms.
+
+    n = int(input("Enter a number:"))
+    a = 0
+    b = 1
+    i = 0
+    print("fibonacci series:")
+    while i < n:
+        print(a, end=" ")
+        c = a + b
+        a = b
+        b = c
+        i = i + 1
+
+    Enter a number: 6
+
+    fibonacci series:
+    0 1 1 2 3 5 
+
+4. Find the sum of digits of a given number.
+
+    n = input("Enter a number:")
+    sum = 0
+    for digit in n:
+        sum = sum + int( digit)
+        print ("sum of digits:", sum)
+
+    Enter a number: 987
+
+    sum of digits: 9
+    sum of digits: 17
+    sum of digits: 24
+
+5. Check whether a number is an Armstrong number
+
+Functions
+
+1. Write a function to find the greatest of three numbers.
+
+    def greatest(a , b, c):
+        return max(a, b ,c)
+    num1 = int(input("Enter first number:"))
+    num2 = int(input("Enter second number:"))
+    num3 = int(input("Enter third number:"))
+    print("Greatest number is:",greatest(num1, num2, num3))
+
+    Enter first number: 11
+    Enter second number: 45
+    Enter third number: 50
+
+    Greatest number is: 50
+
+2. Write a function to check whether a number is prime.
+
+    def is_prime(n):
+        if n <= 1:
+            return False
+        if n == 2:
+            return True
+        if n % 2 == 0:
+            return False
+        for i in range
+          if n % i == 0:
+              return False
+              
+
+3. Write a function that returns the reverse of a string.
+
+    def is_palindrome(s):
+        reverse = s[::-1]
+        if s == reverse:
+            return True
+        else:
+            return False 
+    word = input ("Enter a string:")
+    if is_palindrome(word):
+        print(word, " is a palidrome")
+    else:
+        print(word, "is not a palindrome")
+
+    Enter a string: madam
+
+    madam  is a palidrome
+
+4. Write a function to calculate the area and perimeter of a rectangle.
+
+5. Write a function that accepts a list and returns the second largest element
+
+excepion handling
+
+1. Write a program to handle ZeroDivisionError.
+
+2. Write a program to handle ValueError when the user enters invalid
+
+    try:
+        num = int(input("Enter a number:"))
+        print("you entered:", num)
+        
+    except ValueError:
+        print("Invalid input")
+
+    Enter a number: g
+
+    Invalid input
+
+3. Create a custom exception to check if age is less than 18.
+
+4. Write a program that handles both IndexError and KeyError.
+
+5. Write a program using try, except, else, and finally to read a file and display its contents.
