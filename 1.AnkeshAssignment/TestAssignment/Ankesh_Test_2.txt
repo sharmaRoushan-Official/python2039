@@ -1,0 +1,396 @@
+
+
+Test_2
+
+1. Conditions (if, elif, else)
+
+1. Write a program to check whether a number is positive, negative, or zero.
+
+    num = int(input("Enter Number : "))
+
+    if num>0:
+        print(f"{num} is positive")
+    elif num<0:
+        print(f"{num} is Negative")
+    else:
+        print(f"{num} is zero")
+
+    Enter Number :  3
+
+    3 is positive
+
+2. Write a program to find the largest of three numbers.
+
+    num1 = int(input("Enter Number : "))
+    num2 = int(input("Enter Number : "))
+    num3 = int(input("Enter Number : "))
+
+    if num1>num2 and num1>num3:
+        print(f"{num1} is Largest ")
+    elif num2>num3 and num2>num1:
+        print(f"{num2} is Largest ")
+    elif num3>num1 and num3>num2:
+        print(f"{num3} is Largest ")
+    else:
+        print("All are Equal ")
+        
+
+    Enter Number :  12
+    Enter Number :  12
+    Enter Number :  12
+
+    All are Equal 
+
+3. Write a program to check whether a given year is a leap year.
+
+    year = int(input("Enter the Year : "))
+
+    if year%400 == 0:
+        print(f"{year} is leap year")
+    elif year%100 == 0:
+        print(f"{year} is not leap year")
+    elif year % 4==0:
+        print(f"{year} is leap year")
+    else:
+        print(f"{year} is not leap year")
+
+    Enter the Year :  2000
+
+    2000 is leap year
+
+4. Write a program to check if a character is a vowel or consonant.
+
+    ch = input("Enter a character : ")
+    vow="aeiouAEIOU"
+
+    if ch in vow:
+        print(f"{ch} is vowel ")
+    else:
+        print(f"{ch} is consonant")
+
+    Enter a character :  w
+
+    w is consonant
+
+5. Write a program to calculate the electricity bill:
+
+    -   First 100 units → ₹5/unit
+    -   Next 100 units → ₹7/unit
+    -   Above 200 units → ₹10/unit
+
+    unit = int(input("Enter a consumed unit : "))
+
+    if unit<=100:
+        bill = unit * 5
+        print("Bill Amount is ",bill)
+    elif unit>100 and unit<=200:
+        bill = unit * 7
+        print("Bill Amount is ",bill)
+    else:
+        bill = unit * 10
+        print("Bill Amount is ",bill)
+
+    Enter a consumed unit :  210
+
+    Bill Amount is  2100
+
+2. Loops (for / while)
+
+1. Print all even numbers from 1 to 100.
+
+    for i in range(1,101):
+        if i%2==0:
+            print(i,end = " ")
+
+    2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 32 34 36 38 40 42 44 46 48 50 52 54 56 58 60 62 64 66 68 70 72 74 76 78 80 82 84 86 88 90 92 94 96 98 100 
+
+2. Find the factorial of a given number using a loop.
+
+    num = int(input("Enter a Number : "))
+
+    fact = 1
+    for i in range(1,num+1):
+        fact = fact*i
+    print("Factorial is ",fact)
+
+    Enter a Number :  5
+
+    Factorial is  120
+
+3. Print the Fibonacci series up to n terms.
+
+    num = int(input("Enter a Number : "))
+
+    a=0
+    b=1
+
+    for i in range(1,num+1):
+        print(a,end =" ")
+        a,b=b,a+b
+
+    Enter a Number :  7
+
+    0 1 1 2 3 5 8 
+
+4. Find the sum of digits of a given number.
+
+    num = int(input("Enter a Number : "))
+    temp = num
+    sum1 =0
+    while temp>0:
+        rem = temp%10
+        sum1 = sum1 + rem
+        temp =temp//10
+    print(sum1)
+
+
+    Enter a Number :  1234
+
+    10
+
+5. Check whether a number is an Armstrong number
+
+    num = int(input("Enter a Number :" ))
+
+    digit =len(str(num))
+    temp = num
+    sum1 = 0
+    while temp>0:
+        digits = temp%10
+        sum1 = sum1+ digits**digit
+        temp =temp//10
+    if num == sum1:
+        print("Armstrong")
+    else:
+        print("Not Armstrong")
+
+    Enter a Number : 123
+
+    Not Armstrong
+
+3. Functions
+
+1. Write a function to find the greatest of three numbers.
+
+    def greatest(num1,num2,num3):
+        if num1>num2 and num1>num3:
+            print(f"{num1} is Largest ")
+        elif num2>num3 and num2>num1:
+            print(f"{num2} is Largest ")
+        elif num3>num1 and num3>num2:
+            print(f"{num3} is Largest ")
+        else:
+            print("All are Equal ")
+            
+    greatest(30,40,20)
+
+    40 is Largest 
+
+2. Write a function to check whether a number is prime.
+
+    def prime(n):
+        is_Prime=True
+
+        if n<=1:
+            print(f"{n} is not Prime")
+
+        for i in range(2,n):
+            if n%i == 0:
+                is_Prime = False
+         
+        if is_Prime:
+            print(f"{n} is Prime")
+        else:
+             print(f"{n} is not Prime")
+        
+    n = int(input("Enter a Number :"))
+    prime(n)
+        
+
+    Enter a Number : 6
+
+    6 is not Prime
+
+3. Write a function that returns the reverse of a string.
+
+    def rev(str1):
+        st =""
+        for i in str1:
+            st = i+st
+        print(st)
+
+    str1 = input("Enter a Number :")
+    rev(str1)
+
+    Enter a Number : wer
+
+    rew
+
+4. Write a function to calculate the area and perimeter of a rectangle.
+
+    def area_peri(l,b):
+        area = l*b
+        peri=2*(l+b)
+
+        print("Area is ",area)
+        print("Perimeter is ",peri)
+
+    l= int(input("Enter Length : "))
+    b = int(input("Enter Breadth : "))
+
+    area_peri(l,b)
+
+    Enter Length :  3
+    Enter Breadth :  4
+
+    Area is  12
+    Perimeter is  14
+
+5. Write a function that accepts a list and returns the second largest element.
+
+    def s_lar(lst):
+        maxi = lst[0]
+        sl=lst[0]
+        
+        for i in lst:
+            if i>maxi:
+                sl = maxi
+                maxi = i
+            elif i>sl and i!=maxi:
+                sl = i
+        print("Second Largest is ",sl)
+
+
+
+    lst = [1,3,4,5,7,8,34,98]
+    s_lar(lst)
+
+    Second Largest is  34
+
+4. Exception Handling
+
+1. Write a program to handle ZeroDivisionError.
+
+    try:
+        a = int(input("Enter a Number 1"))
+        b = int(input("Enter a Number 2"))
+
+        print(a/b)
+    except ZeroDivisionError:
+        print("Cannot Divide by Zero ")
+    except ValueError:
+        print("Enter Valid Number")
+
+    Enter a Number 1 23
+    Enter a Number 2 0
+
+    Cannot Divide by Zero 
+
+2. Write a program to handle ValueError when the user enters invalid input.
+
+    try:
+        a = int(input("Enter a Number 1: "))
+
+        print(a)
+    except ValueError:
+        print("Enter Valid Number")
+
+    Enter a Number 1:  s
+
+    Enter Valid Number
+
+3. Create a custom exception to check if age is less than 18.
+
+    class AgeError (Exception):
+        pass
+
+    try:
+        age = int(input("Enter Your Age : "))
+        if age<18:
+            raise AgeError("Invalid Age, Please Enter age above 18 ")
+            
+    except AgeError as e:
+        print(e)
+    else:
+        print("Eligible")
+    finally:
+        print("Thank You")
+
+    Enter Your Age :  12
+
+    Invalid Age, Please Enter age above 18 
+    Thank You
+
+4. Write a program that handles both IndexError and KeyError.
+
+    try:
+        lst = [10, 20, 30]
+        print(lst[5])   
+        
+    except IndexError:
+        print("Index Out Of Range")
+
+    try:
+        d = {"name": "Rahul"}
+        print(d["age"]) 
+        
+    except KeyError:
+        print("Key Not Found")
+
+    Index Out Of Range
+    Key Not Found
+
+5. Write a program using try, except, else, and finally to read a file and display its contents.
+
+    try:
+        file = open("D:\\Python_Test_Questions-1.txt",'r')
+    except FileNotFoundError:
+        print("File Name Error! Please Enter a valid file Name.")
+    else:
+        print("Output is:\n",file.read())
+    finally:
+        print("Thank You")
+
+    Output is:
+     Python Test Questions
+
+    1. Conditions (if, elif, else)
+
+    1.  Write a program to check whether a number is positive, negative, or
+        zero.
+    2.  Write a program to find the largest of three numbers.
+    3.  Write a program to check whether a given year is a leap year.
+    4.  Write a program to check if a character is a vowel or consonant.
+    5.  Write a program to calculate the electricity bill:
+        -   First 100 units â†’ â‚¹5/unit
+        -   Next 100 units â†’ â‚¹7/unit
+        -   Above 200 units â†’ â‚¹10/unit
+
+    2. Loops (for / while)
+
+    1.  Print all even numbers from 1 to 100.
+    2.  Find the factorial of a given number using a loop.
+    3.  Print the Fibonacci series up to n terms.
+    4.  Find the sum of digits of a given number.
+    5.  Check whether a number is an Armstrong number.
+
+    3. Functions
+
+    1.  Write a function to find the greatest of three numbers.
+    2.  Write a function to check whether a number is prime.
+    3.  Write a function that returns the reverse of a string.
+    4.  Write a function to calculate the area and perimeter of a rectangle.
+    5.  Write a function that accepts a list and returns the second largest
+        element.
+
+    4. Exception Handling
+
+    1.  Write a program to handle ZeroDivisionError.
+    2.  Write a program to handle ValueError when the user enters invalid
+        input.
+    3.  Create a custom exception to check if age is less than 18.
+    4.  Write a program that handles both IndexError and KeyError.
+    5.  Write a program using try, except, else, and finally to read a file
+        and display its contents.
+
+    Code Executed Successfully
