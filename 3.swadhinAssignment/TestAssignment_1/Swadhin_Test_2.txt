@@ -1,0 +1,220 @@
+
+
+* condition
+
+1.  Write a program to check whether a number is positive, negative, or
+    zero.
+
+    num = int(input("enter the number"))
+
+    if num>0:
+        print("number is positive")
+    elif num<0:
+        print("number is nagative")
+    else:
+        print("zero")
+
+    enter the number 0
+
+    zero
+
+1.  Write a program to find the largest of three numbers.
+
+    num1 = int(input("enter the first number"))
+
+    num2 = int(input("enter the second number"))
+
+    num3 = int(input("enter the third number"))
+
+    if num1>num2 and num>num3:
+        print(num1,"is larger than others")
+    elif num2>num1 and num2>num3:
+        print(num2,"is larger than others")
+    elif num3>num1 and num3>num2:
+        print(num3,"is larger than others")
+    else:
+        print("invalid input")
+
+    enter the first number 25
+    enter the second number 60
+    enter the third number 20
+
+    60 is larger than others
+
+1.  Write a program to check if a character is a vowel or consonant.
+
+    ch = input("enter the character ")
+
+    if ch.lower() in ('a', 'e', 'i', 'o', 'u'):
+        print(ch,"the character is vowel ")
+    elif ch.lower() in ('b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','x','y','z'):
+        print(ch,"the character is consonant ")
+    else:
+        print("ivaild input")
+        
+
+    enter the character  i
+
+    i the character is vowel 
+
+1.  Write a program to calculate the electricity bill:
+    -   First 100 units → ₹5/unit
+    -   Next 100 units → ₹7/unit
+    -   Above 200 units → ₹10/unit
+
+    unit = int(input("enter the consumed unit"))
+
+    if unit<=100:
+        bill= unit*5
+        print("total bill",bill)
+    elif unit>100 and unit<=200:
+        bill= unit*7
+        print("total bill",bill)
+    elif unit>200:
+        bill= unit*10
+        print("total bill",bill)
+    else:
+        print("invalid input")
+        
+
+    enter the consumed unit 500
+
+    total bill 5000
+
+* Loops (for / while)
+
+1.  Print all even numbers from 1 to 100.
+
+    for i in range(1,101):
+        if i % 2 == 0:
+            print(i)
+        
+
+    2
+    4
+    6
+    8
+    10
+    12
+    14
+    16
+    18
+    20
+    22
+    24
+    26
+    28
+    30
+    32
+    34
+    36
+    38
+    40
+    42
+    44
+    46
+    48
+    50
+    52
+    54
+    56
+    58
+    60
+    62
+    64
+    66
+    68
+    70
+    72
+    74
+    76
+    78
+    80
+    82
+    84
+    86
+    88
+    90
+    92
+    94
+    96
+    98
+    100
+
+1.  Find the factorial of a given number using a loop.
+
+    n=int(input("enter the number"))
+    fact=1
+    for i in range(1,n+1):
+        fact=fact*i
+    print(f"factorial of {n} = {fact}")
+        
+
+    enter the number 7
+
+    factorial of 7 = 5040
+
+1.  Find the sum of digits of a given number.
+
+    n =int(input("enter the number"))
+    sum=0
+    for i in range(1,n+1):
+        sum=sum+i
+    print(f"sum upto {n} = {sum}")
+
+    enter the number 11
+
+    sum upto 11 = 66
+
+* Functions
+
+1.  Write a function to find the greatest of three numbers.
+
+    def greatest(num1,num2,num3):
+        
+        if num1>num2 and num>num3:
+            print(num1,"is larger than others")
+        elif num2>num1 and num2>num3:
+            print(num2,"is larger than others")
+        elif num3>num1 and num3>num2:
+            print(num3,"is larger than others")
+        else:
+            print("invalid input")
+
+    num1 = int(input("enter the first number"))
+        
+    num2 = int(input("enter the second number"))
+        
+    num3 = int(input("enter the third number"))
+
+    greatest(num1,num2,num3)
+
+    enter the first number 46
+    enter the second number 78
+    enter the third number 98
+
+    98 is larger than others
+
+1.  Write a function to check whether a number is prime.
+
+    def prime(n):
+        
+
+      Cell In[45], line 2
+        
+        ^
+    _IncompleteInputError: incomplete input
+
+2.  Write a function that returns the reverse of a string.
+
+    def reverse_string(s):
+        return s[::-1]
+    str1=input("enter a string")
+
+    reverse_string(str1)
+
+        
+
+    enter a string 'swadhin'
+
+    "'nihdaws'"
