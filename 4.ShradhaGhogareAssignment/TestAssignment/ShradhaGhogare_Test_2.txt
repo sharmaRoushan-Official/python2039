@@ -1,0 +1,40 @@
+Python Test Questions
+
+1. Conditions (if, elif, else)
+
+1.  Write a program to check whether a number is positive, negative, or
+    zero.
+2.  Write a program to find the largest of three numbers.
+3.  Write a program to check whether a given year is a leap year.
+4.  Write a program to check if a character is a vowel or consonant.
+5.  Write a program to calculate the electricity bill:
+    -   First 100 units → ₹5/unit
+    -   Next 100 units → ₹7/unit
+    -   Above 200 units → ₹10/unit
+
+2. Loops (for / while)
+
+1.  Print all even numbers from 1 to 100.
+2.  Find the factorial of a given number using a loop.
+3.  Print the Fibonacci series up to n terms.
+4.  Find the sum of digits of a given number.
+5.  Check whether a number is an Armstrong number.
+
+3. Functions
+
+1.  Write a function to find the greatest of three numbers.
+2.  Write a function to check whether a number is prime.
+3.  Write a function that returns the reverse of a string.
+4.  Write a function to calculate the area and perimeter of a rectangle.
+5.  Write a function that accepts a list and returns the second largest
+    element.
+
+4. Exception Handling
+
+1.  Write a program to handle ZeroDivisionError.
+2.  Write a program to handle ValueError when the user enters invalid
+    input.
+3.  Create a custom exception to check if age is less than 18.
+4.  Write a program that handles both IndexError and KeyError.
+5.  Write a program using try, except, else, and finally to read a file
+    and display its contents.
